@@ -45,9 +45,9 @@ public class Main {
         byte studentAS = 27;
         byte studentEA = 30;
         int totalStudents = studentLP + studentEA + studentAS;
-        System.out.println("Всего в трех классах " + totalStudents + " учеников");
+        //System.out.println("Всего в трех классах " + totalStudents + " учеников");
         short totalPaper = 480;
-        System.out.println("Всего закупленно бумаги " + totalPaper + " листов");
+        //System.out.println("Всего закупленно бумаги " + totalPaper + " листов");
         int paperForOneStudent = totalPaper / totalStudents;
         System.out.println("На каждого ученика рассчитано " + paperForOneStudent + " листов бумаги");
 
@@ -62,7 +62,7 @@ public class Main {
         System.out.println("Задача 4");
         byte machineOutputInTwoMinutes = 16;
         int machineOutputInOneMinute = machineOutputInTwoMinutes / 2;
-        System.out.println("Производительность машины для изготовления бутылок - " + machineOutputInOneMinute + " бутылок в минуту.");
+        //System.out.println("Производительность машины для изготовления бутылок - " + machineOutputInOneMinute + " бутылок в минуту.");
         int machineOutputInTwentyMinutes = machineOutputInOneMinute * 20;
         System.out.println("За 20 минут работы машина произвела бутылок - " + machineOutputInTwentyMinutes + " штук");
         int oneDay = 24 * 60;
@@ -82,9 +82,9 @@ public class Main {
         byte whitePaintForOneClass = 2;
         byte brownPaintForOneClass = 4;
         int paintsForOneClass = whitePaintForOneClass + brownPaintForOneClass;
-        System.out.println("На один класс уходит " + paintsForOneClass + " банок краски всего");
+        //System.out.println("На один класс уходит " + paintsForOneClass + " банок краски всего");
         int totalClasses = paintCans / paintsForOneClass;
-        System.out.println("Всего в школе  " + totalClasses + " классов");
+        //System.out.println("Всего в школе  " + totalClasses + " классов");
         int totalWhitePaint = whitePaintForOneClass * totalClasses;
         int totalBrownPaint = brownPaintForOneClass * totalClasses;
         System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски." );
@@ -133,6 +133,48 @@ public class Main {
         // System.out.println(averageDaysI);
         // float averageDays = averageDaysF % averageDaysI;
         // System.out.println(averageDays);
+
+        //Задача 8
+        //Маша получает 67 760 рублей в месяц
+        //Денис получает 83 690 рублей в месяц
+        //Кристина получает 76 230 рублей в месяц
+        //Каждому нужно увеличить зарплату на 10% от текущей месячной.
+        // Дополнительно руководитель попросил посчитать разницу между годовым доходом с нынешней зарплатой и после повышения.
+        // Посчитайте, сколько будет получать каждый из сотрудников, а также разницу между годовым доходом до и после повышения.
+        //Выведите в консоль информацию по каждому сотруднику.
+        //Например, "Маша теперь получает **** рублей. Годовой доход вырос на **** рублей".
+        System.out.println("Задача 8");
+        int monthlySalaryMary = 67760;
+        int monthlySalaryDen = 83690;
+        int monthlySalaryKris = 76230;
+        double indexingSize = 0.1;
+        double monthlySalaryAfterARaiseMary = monthlySalaryMary + monthlySalaryMary * indexingSize;
+        //System.out.println("Ежемесячная зарплата Маши после повышения составит " + monthlySalaryAfterARaiseMary + " рублей.");
+        double monthlySalaryAfterARaiseDen = monthlySalaryDen + monthlySalaryDen * indexingSize;
+        //System.out.println("Ежемесячная зарплата Дениса после повышения составит " + monthlySalaryAfterARaiseDen + " рублей.");
+        double monthlySalaryAfterARaiseKris = monthlySalaryKris + monthlySalaryKris * indexingSize;
+        //System.out.println("Ежемесячная зарплата Кристины после повышения составит " + monthlySalaryAfterARaiseKris + " рублей.");
+        int annualIncomeMary = monthlySalaryMary * 12;
+        //System.out.println(annualIncomeMary);
+        int annualIncomeDen = monthlySalaryDen * 12;
+        //System.out.println(annualIncomeDen);
+        int annualIncomeKris = monthlySalaryKris * 12;
+        //System.out.println(annualIncomeKris);
+        double annualIncomeAfterARaiseMary = monthlySalaryAfterARaiseMary * 12;
+        //System.out.println(annualIncomeAfterARaiseMary);
+        double annualIncomeAfterARaiseDen = monthlySalaryAfterARaiseDen * 12;
+        //System.out.println(annualIncomeAfterARaiseDen);
+        double annualIncomeAfterARaiseKris = monthlySalaryAfterARaiseKris * 12;
+        //System.out.println(annualIncomeAfterARaiseKris);
+        double annualIncreaseMary = annualIncomeAfterARaiseMary - annualIncomeMary;
+        double annualIncreaseDen = annualIncomeAfterARaiseDen - annualIncomeDen;
+        double annualIncreaseKris = annualIncomeAfterARaiseKris - annualIncomeKris;
+        System.out.println("Маша теперь получает " + monthlySalaryAfterARaiseMary + " рублей в месяц. Годовой доход вырос на " + annualIncreaseMary + " рублей");
+        System.out.println("Денис теперь получает " + monthlySalaryAfterARaiseDen + " рублей в месяц. Годовой доход вырос на " + annualIncreaseDen + " рублей");
+        System.out.println("Кристина теперь получает " + monthlySalaryAfterARaiseKris + " рублей в месяц. Годовой доход вырос на " + annualIncreaseKris + " рублей");
+
+
+
 
 
 
