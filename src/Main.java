@@ -15,7 +15,7 @@ public class Main {
         double nameSix = 3.1415926535;
         System.out.println("Значение переменной "+ "nameSix" + " c типом double равно "+ nameSix);
 
-        //Задача
+        //Задача 2
         System.out.println("Задача 2");
         float firstNumber = 27.12f;
         System.out.println(firstNumber);
@@ -36,12 +36,147 @@ public class Main {
         byte eighthNumber = 67;
         System.out.println(eighthNumber);
 
+        //Задача 3
+        //У Людмилы Павловны 23 ученика , у Анны Сергеевны 27 учеников и у Екатерины Андреевны – 30 учеников.
+        //Три учительницы закупили все вместе 480 листов бумаги на все три класса. Посчитайте, сколько достанется листов каждому ученику.
+        //Результат задачи выведите в консоль в формате "На каждого ученика рассчитано … листов бумаги".
+        System.out.println("Задача 3");
+        byte studentLP = 23;
+        byte studentAS = 27;
+        byte studentEA = 30;
+        int totalStudents = studentLP + studentEA + studentAS;
+        //System.out.println("Всего в трех классах " + totalStudents + " учеников");
+        short totalPaper = 480;
+        //System.out.println("Всего закупленно бумаги " + totalPaper + " листов");
+        int paperForOneStudent = totalPaper / totalStudents;
+        System.out.println("На каждого ученика рассчитано " + paperForOneStudent + " листов бумаги");
+
+        //Задача 4
+        // Производительность машины для изготовления бутылок - 16 бутылок за 2 минуты. Какая производительность машины будет:
+        //за 20 минут
+        //в сутки
+        //за 3 дня
+        //за 1 месяц
+        //Рассчитывайте продолжительность работы машины в том случае, если она работает без перерыва заданный промежуток времени.
+        //Результаты подсчетов выведите в консоль в формате "За … машины произвела бутылок … штук "
+        System.out.println("Задача 4");
+        byte machineOutputInTwoMinutes = 16;
+        int machineOutputInOneMinute = machineOutputInTwoMinutes / 2;
+        //System.out.println("Производительность машины для изготовления бутылок - " + machineOutputInOneMinute + " бутылок в минуту.");
+        int machineOutputInTwentyMinutes = machineOutputInOneMinute * 20;
+        System.out.println("За 20 минут работы машина произвела бутылок - " + machineOutputInTwentyMinutes + " штук");
+        int oneDay = 24 * 60;
+        int machineOutputInOneDay = machineOutputInOneMinute * oneDay;
+        System.out.println("В сутки машина произвела бутылок - " + machineOutputInOneDay + " штук");
+        int machineOutputInThreeDays = machineOutputInOneDay * 3;
+        System.out.println("За 3 дня машина произвела бутылок - " + machineOutputInThreeDays + " штук");
+        int machineOutputInOneMonth = machineOutputInOneDay * 31;
+        System.out.println("За октябрь машина произвела бутылок - " + machineOutputInOneMonth + " штук");
+
+        //Задача 5
+        //На ремонт школы нужно 120 банок краски двух цветов: белой и коричневой. На один класс уходит 2 банки белой и 4 банки коричневой краски.
+        // Сколько банок каждой краски было куплено?
+        //Выведите результат задачи в консоль в формате "В школе, где … классов, нужно … банок белой краски и … банок коричневой краски".
+        System.out.println("Задача 5");
+        byte paintCans = 120;
+        byte whitePaintForOneClass = 2;
+        byte brownPaintForOneClass = 4;
+        int paintsForOneClass = whitePaintForOneClass + brownPaintForOneClass;
+        //System.out.println("На один класс уходит " + paintsForOneClass + " банок краски всего");
+        int totalClasses = paintCans / paintsForOneClass;
+        //System.out.println("Всего в школе  " + totalClasses + " классов");
+        int totalWhitePaint = whitePaintForOneClass * totalClasses;
+        int totalBrownPaint = brownPaintForOneClass * totalClasses;
+        System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски." );
+
+        //Задача 6
+        //Бананы – 5 штук (1 банан - 80 грамм);
+        //Молоко – 200 мл (100 мл = 105 грамм);
+        //Мороженое пломбир – 2 брикета по 100 грамм;
+        //Яйца сырые – 4 яйца (1 яйцо - 70 грамм).
+        //Подсчитайте вес (количество грамм) такого спорт-завтрака, а затем переведите его в килограммы.
+        System.out.println("Задача 6");
+        byte bananaWeightGr = 80;
+        byte milkWeightGr = 105;
+        byte icecreamWeightGr = 100;
+        byte eggWeightGr = 70;
+        int breakfastWeightGr = bananaWeightGr * 5 + milkWeightGr * 2 + icecreamWeightGr * 2 + eggWeightGr * 4;
+        System.out.println("Вес одной порции завтрака " + breakfastWeightGr + " гр.");
+        int grPerKg = 1000;
+        float breakfastWeightKg = breakfastWeightGr / (float) grPerKg;
+        System.out.println("Вес одной порции завтрака " + breakfastWeightKg + " кг.");
+
+        //Задача 7
+        //Правила соревнований обновились, и теперь нашему спортсмену нужно сбросить 7 кг, чтобы оставаться в своей весовой категории.
+        //Тренер скорректировал рацион так, чтобы спортсмен мог терять в весе от 250 до 500 грамм в день.
+        //Посчитайте, сколько дней уйдёт на похудение, если спортсмен будет терять каждый день по 250 грамм и сколько, если каждый день будет худеть на 500 грамм.
+        //Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения.
+        System.out.println("Задача 7");
+        byte overweightKg = 7;
+        int overweightGr = overweightKg * grPerKg;
+        short minWeightLossPerDay = 250;
+        short maxWeightLossPerDay = 500;
+        int maxDays = overweightGr / minWeightLossPerDay;
+        System.out.println("если спортсмен будет терять каждый день по 250 грамм - " + maxDays + " дней уйдёт на похудение");
+        int minDays = overweightGr / maxWeightLossPerDay;
+        System.out.println("если спортсмен будет терять каждый день по 500 грамм - " + minDays + " дней уйдёт на похудение");
+        int averageWeightLossPerDay = (minWeightLossPerDay + maxWeightLossPerDay) / 2;
+        //System.out.println(averageWeightLossPerDay);
+        int averageDays = overweightGr / averageWeightLossPerDay;
+        System.out.println(averageDays + " дней может потребоваться в среднем, чтобы добиться результата похудения.");
+
+        //int averageWeightLoss = overweightGr % averageWeightLossPerDay;
+        // System.out.println(averageWeightLoss);
+        //float averageDaysF = (overweightGr /(float) averageWeightLossPerDay);
+        // System.out.println(averageDaysF);
+        //int averageDaysI = overweightGr / averageWeightLossPerDay;
+        // System.out.println(averageDaysI);
+        // float averageDays = averageDaysF % averageDaysI;
+        // System.out.println(averageDays);
+
+        //Задача 8
+        //Маша получает 67 760 рублей в месяц
+        //Денис получает 83 690 рублей в месяц
+        //Кристина получает 76 230 рублей в месяц
+        //Каждому нужно увеличить зарплату на 10% от текущей месячной.
+        // Дополнительно руководитель попросил посчитать разницу между годовым доходом с нынешней зарплатой и после повышения.
+        // Посчитайте, сколько будет получать каждый из сотрудников, а также разницу между годовым доходом до и после повышения.
+        //Выведите в консоль информацию по каждому сотруднику.
+        //Например, "Маша теперь получает **** рублей. Годовой доход вырос на **** рублей".
+        System.out.println("Задача 8");
+        int monthlySalaryMary = 67760;
+        int monthlySalaryDen = 83690;
+        int monthlySalaryKris = 76230;
+        double indexingSize = 0.1;
+        double monthlySalaryAfterARaiseMary = monthlySalaryMary + monthlySalaryMary * indexingSize;
+        //System.out.println("Ежемесячная зарплата Маши после повышения составит " + monthlySalaryAfterARaiseMary + " рублей.");
+        double monthlySalaryAfterARaiseDen = monthlySalaryDen + monthlySalaryDen * indexingSize;
+        //System.out.println("Ежемесячная зарплата Дениса после повышения составит " + monthlySalaryAfterARaiseDen + " рублей.");
+        double monthlySalaryAfterARaiseKris = monthlySalaryKris + monthlySalaryKris * indexingSize;
+        //System.out.println("Ежемесячная зарплата Кристины после повышения составит " + monthlySalaryAfterARaiseKris + " рублей.");
+        int annualIncomeMary = monthlySalaryMary * 12;
+        //System.out.println(annualIncomeMary);
+        int annualIncomeDen = monthlySalaryDen * 12;
+        //System.out.println(annualIncomeDen);
+        int annualIncomeKris = monthlySalaryKris * 12;
+        //System.out.println(annualIncomeKris);
+        double annualIncomeAfterARaiseMary = monthlySalaryAfterARaiseMary * 12;
+        //System.out.println(annualIncomeAfterARaiseMary);
+        double annualIncomeAfterARaiseDen = monthlySalaryAfterARaiseDen * 12;
+        //System.out.println(annualIncomeAfterARaiseDen);
+        double annualIncomeAfterARaiseKris = monthlySalaryAfterARaiseKris * 12;
+        //System.out.println(annualIncomeAfterARaiseKris);
+        double annualIncreaseMary = annualIncomeAfterARaiseMary - annualIncomeMary;
+        double annualIncreaseDen = annualIncomeAfterARaiseDen - annualIncomeDen;
+        double annualIncreaseKris = annualIncomeAfterARaiseKris - annualIncomeKris;
+        System.out.println("Маша теперь получает " + monthlySalaryAfterARaiseMary + " рублей в месяц. Годовой доход вырос на " + annualIncreaseMary + " рублей");
+        System.out.println("Денис теперь получает " + monthlySalaryAfterARaiseDen + " рублей в месяц. Годовой доход вырос на " + annualIncreaseDen + " рублей");
+        System.out.println("Кристина теперь получает " + monthlySalaryAfterARaiseKris + " рублей в месяц. Годовой доход вырос на " + annualIncreaseKris + " рублей");
 
 
 
 
 
 
-
-    }
+                           }
 }
